@@ -1,0 +1,5 @@
+ COMPILAR:
+ cobc -x -free *.cob -o holaMundo.exe
+
+ EJECUTAR:
+ ./holaMundo.exe
