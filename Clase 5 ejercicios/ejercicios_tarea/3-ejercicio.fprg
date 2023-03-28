@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ariel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-22 03:57:09 p.&#160;m."/>
+        <attribute name="created" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjI7MDI6MzA6MjQgcC7CoG0uOzMxODM="/>
+        <attribute name="edited" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjI7MDM6NTc6MDkgcC7CoG0uOzI7MzMwNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="IVA" type="Integer" array="False" size=""/>
+            <assign variable="IVA" expression="21"/>
+            <declare name="montoFactura" type="Integer" array="False" size=""/>
+            <declare name="resultadoIVA" type="Real" array="False" size=""/>
+            <output expression="&quot;Increse unn monto para calcular el IVA&quot;" newline="True"/>
+            <input variable="montoFactura"/>
+            <assign variable="resultadoIVA" expression="(montoFactura * IVA)  / 100"/>
+            <output expression="&quot;El IVA del monto de $&quot; &amp; montoFactura &amp; &quot; es $&quot; &amp; resultadoIVA" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

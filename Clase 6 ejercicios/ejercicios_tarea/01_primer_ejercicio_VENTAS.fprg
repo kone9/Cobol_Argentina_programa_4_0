@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sol"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-23 11:25:30 a.m."/>
+        <attribute name="created" value="c29sO1BJWElFOzIwMjMtMDItMjM7MTA6NTE6MDkgYS5tLjsyMTMy"/>
+        <attribute name="edited" value="c29sO1BJWElFOzIwMjMtMDItMjM7MTE6MjU6MzAgYS5tLjsxOzIyMzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="IDvendedor" type="Integer" array="False" size=""/>
+            <declare name="CANTventas" type="Integer" array="False" size=""/>
+            <declare name="valorTOTAL" type="Integer" array="False" size=""/>
+            <declare name="VENTAconcomision" type="Integer" array="False" size=""/>
+            <declare name="SALARIObase" type="Integer" array="False" size=""/>
+            <assign variable="SALARIObase" expression="50000"/>
+            <declare name="SALARIOfinal" type="Integer" array="False" size=""/>
+            <output expression="&quot;INGRESE SU ID&quot;" newline="True"/>
+            <input variable="IDvendedor"/>
+            <output expression="&quot;INGRESE SI CANTIDAD DE VENTAS&quot;" newline="True"/>
+            <input variable="CANTventas"/>
+            <output expression="&quot;INGRESE EL TOTAL DE SUS VENTAS&quot;" newline="True"/>
+            <input variable="valorTOTAL"/>
+            <assign variable="VENTAconcomision" expression="valorTOTAL *1.05"/>
+            <assign variable="SALARIOfinal" expression="SALARIObase + VENTAconcomision"/>
+            <output expression="&quot;El salario del empleado &quot; &amp; IDvendedor &amp; &quot; es $&quot; &amp; SALARIOfinal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

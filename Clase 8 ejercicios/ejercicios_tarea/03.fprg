@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ariel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-01 07:53:15 a.&#160;m."/>
+        <attribute name="created" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDMtMDE7MDY6NTI6MTUgYS7CoG0uOzMxNzQ="/>
+        <attribute name="edited" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDMtMDE7MDc6NTM6MTUgYS7CoG0uOzExOzMzMzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="----------------------------------------------------------------------------------------------------"/>
+            <comment text="Ariel Gimenez"/>
+            <comment text="01/03/2023"/>
+            <comment text="Clase 8 EJERCICIO 3"/>
+            <comment text="Crear un programa que solicite un n&#250;mero de mes (ejemplo 4) y escriba el nombre del mes en &#13;&#10;letras (&quot;abril&quot;). Verificar que el mes sea v&#225;lido e informar en caso que no lo sea. "/>
+            <comment text="----------------------------------------------------------------------------------------------------"/>
+            <comment text="declaro y asigno por entrada variable de mes"/>
+            <declare name="mesIngresado" type="Integer" array="False" size=""/>
+            <output expression="&quot;ingrese un mes del 1 al 12&quot;" newline="True"/>
+            <input variable="mesIngresado"/>
+            <if expression="mesIngresado &gt;= 1 and mesIngresado &lt;= 12">
+                <then>
+                    <comment text="verifico meses con n&#250;meros"/>
+                    <if expression="mesIngresado == 1">
+                        <then>
+                            <output expression="&quot;enero&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="mesIngresado == 2">
+                        <then>
+                            <output expression="&quot;febrero&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="mesIngresado == 3">
+                        <then>
+                            <output expression="&quot;marzo&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="mesIngresado == 4">
+                        <then>
+                            <output expression="&quot;abril&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="mesIngresado == 5">
+                        <then>
+                            <output expression="&quot;mayo&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="mesIngresado == 6">
+                        <then>
+                            <output expression="&quot;junio&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="mesIngresado == 7">
+                        <then>
+                            <output expression="&quot;julio&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="mesIngresado == 8">
+                        <then>
+                            <output expression="&quot;agosto&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="mesIngresado == 9">
+                        <then>
+                            <output expression="&quot;septiebre&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="mesIngresado == 10">
+                        <then>
+                            <output expression="&quot;octubre&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="mesIngresado == 11">
+                        <then>
+                            <output expression="&quot;noviembre&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="mesIngresado == 12">
+                        <then>
+                            <output expression="&quot;diciembre&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else>
+                    <comment text="si el numero ingresado es incorrecto, tambien tendria que verificar que no sea letra, pero no se como hacerlo en flowgorithm"/>
+                    <output expression="&quot;El programa se va a cerrar, solo Ingrese valores de 1 al 12&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ariel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-02 01:10:15 p.&#160;m."/>
+        <attribute name="created" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDMtMDI7MTA6NDg6MjEgYS7CoG0uOzMxNzI="/>
+        <attribute name="edited" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDMtMDI7MDE6MTA6MTUgcC7CoG0uOzU7MzI5MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="CLASE 10 ejercicio matrices BIDIMENSIONALES"/>
+            <comment text="Desarrolle un algoritmo con un diagrama de flujo que muestre los pasos a seguir&#13;&#10;para:&#13;&#10;- Mostrar la planilla Excel que se muestra a continuaci&#243;n con el resultado de todas&#13;&#10;las tablas del 1 al 9, ambas inclusive."/>
+            <comment text="matriz"/>
+            <declare name="matrix" type="Integer" array="True" size="9.9"/>
+            <assign variable="matrix[1.1]" expression="0"/>
+            <comment text="indices"/>
+            <declare name="fila" type="Integer" array="False" size=""/>
+            <declare name="columna" type="Integer" array="False" size=""/>
+            <declare name="producto" type="Integer" array="False" size=""/>
+            <comment text="bucle fila"/>
+            <for variable="fila" start="1" end="9" direction="inc" step="1">
+                <comment text="bucle columna"/>
+                <for variable="columna" start="1" end="9" direction="inc" step="1">
+                    <comment text="obtenemos el producto en esta posicion"/>
+                    <assign variable="producto" expression="fila * columna"/>
+                    <comment text="guardamos el valor del producto en los indices"/>
+                    <output expression="&quot;FILA= &quot;&amp;fila &amp; &quot; COLUMNA= &quot;&amp;columna &amp;  &quot; PRODUCTO= &quot;&amp;producto" newline="True"/>
+                </for>
+                <output expression="&quot;fin fila&quot;" newline="True"/>
+            </for>
+            <output expression="&quot;FIN DE PROGRAMA&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

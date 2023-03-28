@@ -1,0 +1,44 @@
+       A...B................................................................
+       PROCEDURE DIVISION.
+      ************************************************************************
+      * aqui se han puesto comentarios para marcar las areas                 *
+      ************************************************************************
+      *  ABRO LOS ARCHIVOS
+            OPEN INPUT PERSONAL. 
+	    OPEN OUTPUT REPORTE.
+      *
+      * COMIENZA EL PROGRAMA
+      *
+      *     01-06			    Número de secuencia de área
+      *       07			    Indicador de área
+      *     08-11			    Área A
+      *     12-72			    Área B
+      *     73-80			    Designación del programa
+
+      ************************************************************************
+      * aqui se ha cambiado la estructura secuencial que tenía el anterior   *
+      ************************************************************************
+
+           READ PERSONAL INTO PERSONAL-LAYOUT SET END-OF-FIN TO TRUE
+	   PERFORM UNTIL END-OF-FIN
+		PERFORM	ARMO-REPORTE
+		PERFORM	LEO-PERSONAL
+	   END-PERFORM.
+	   CLOSE PERSONAL REPORTE
+	   GOBACK.
+       ARMO-REPORTE.
+		MOVE	NUM-EMPLEADO	TO REP-NUM-EMPLEADO
+		MOVE	AA-ALTA			TO REP-AA-ALTA
+		MOVE	MM-ALTA			TO REP-MM-ALTA
+		MOVE	DD-ALTA			TO REP-DD-ALTA
+		MOVE	REPORTE-LAYOUT TO REGISTRO-REPORTE
+		WRITE	REGISTRO-REPORTE
+
+       LEO-PERSONAL
+		READ	PERSONAL INTO PERSONAL-LAYOUT SET END-OF-FIN TO TRUE.
+
+      * les recuerdo que la instruccion de lectura debería tener el 'AT END" 
+      * DEBERíA SER ASI:
+
+           READ	PERSONAL INTO PERSONAL-LAYOUT AT END
+                                                SET END-OF-FIN TO TRUE.

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ariel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-06 09:02:34 a.&#160;m."/>
+        <attribute name="created" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDMtMDE7MDY6NTI6MTUgYS7CoG0uOzMxNzQ="/>
+        <attribute name="edited" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDMtMDY7MDk6MDI6MzQgYS7CoG0uOzU2OzMzNDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="--------------------------------------------------------------------------------------------------"/>
+            <comment text="Ariel Gimenez"/>
+            <comment text="02/03/2023"/>
+            <comment text="Cobol turno ma&#241;ana Clase 9 EJERCICIO 4"/>
+            <comment text="Desarrollar un diagrama de flujo para imprimir los 100 primeros n&#250;meros de Fibonacci. &#13;&#10;Recuerde que un n&#250;mero de Fibonacci&#13;&#10;se calcula como la suma de los dos anteriores as&#237;:&#13;&#10;0, 1, 1, 2, 3, 5, 8,13&#8230;&#13;"/>
+            <comment text="--------------------------------------------------------------------------------------------------"/>
+            <comment text="VARIABLES"/>
+            <comment text="cantidad de n&#250;meros"/>
+            <declare name="cantidadNumerosFibonacciAImprimir" type="Integer" array="False" size=""/>
+            <comment text="el numero fibonacci actual, osea aca hago la ecuacion"/>
+            <declare name="numeroFibonacci" type="Integer" array="False" size=""/>
+            <assign variable="numeroFibonacci" expression="0"/>
+            <comment text="el n&#250;mero anterior para determinar la ecucacion fibonacci"/>
+            <declare name="numeroAnterior" type="Integer" array="False" size=""/>
+            <assign variable="numeroAnterior" expression="0"/>
+            <comment text="el n&#250;mero actual para determinar la ecucacion fibonacci"/>
+            <declare name="numeroActual" type="Integer" array="False" size=""/>
+            <assign variable="numeroActual" expression="1"/>
+            <comment text="cantidad de numeros a imprimir"/>
+            <output expression="&quot;ingrese cantidad de n&#250;meros&quot;" newline="True"/>
+            <input variable="cantidadNumerosFibonacciAImprimir"/>
+            <comment text="los dos primeros valores los pongo como print directo fuera del bucle"/>
+            <output expression="&quot;0&quot;" newline="True"/>
+            <output expression="&quot;1&quot;" newline="True"/>
+            <comment text="bucle PARA(FOR) descuento uno en cantida de n&#250;meros porque empieza a contar desde cero"/>
+            <declare name="contador" type="Integer" array="False" size=""/>
+            <for variable="contador" start="0" end="cantidadNumerosFibonacciAImprimir - 1" direction="inc" step="1">
+                <comment text="aca hago la ecucaci&#243;n para determinar el n&#250;mero"/>
+                <assign variable="numeroFibonacci" expression="numeroAnterior + numeroActual"/>
+                <output expression="numeroFibonacci" newline="True"/>
+                <comment text="invierto los valores para obtener los pr&#243;ximos"/>
+                <assign variable="numeroAnterior" expression="numeroActual"/>
+                <assign variable="numeroActual" expression="numeroFibonacci"/>
+            </for>
+            <output expression="&quot;fin de programa&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

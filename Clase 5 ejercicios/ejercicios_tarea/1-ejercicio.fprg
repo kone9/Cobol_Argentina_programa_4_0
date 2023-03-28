@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ariel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-22 03:34:49 p.&#160;m."/>
+        <attribute name="created" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjI7MDM6Mjg6MjIgcC7CoG0uOzMxODk="/>
+        <attribute name="edited" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjI7MDM6MzQ6NDkgcC7CoG0uOzI7MzMwNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="primerNumero" type="Integer" array="False" size=""/>
+            <declare name="segundoNumero" type="Integer" array="False" size=""/>
+            <declare name="resultadoSuma" type="Integer" array="False" size=""/>
+            <declare name="resultadoDiferencia" type="Integer" array="False" size=""/>
+            <output expression="&quot;ingresa un numero&quot;" newline="True"/>
+            <input variable="primerNumero"/>
+            <output expression="&quot;ingresa otro numero&quot;" newline="True"/>
+            <input variable="segundoNumero"/>
+            <assign variable="resultadoSuma" expression="primerNumero + segundoNumero"/>
+        </body>
+    </function>
+</flowgorithm>

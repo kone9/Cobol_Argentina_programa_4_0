@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ariel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-27 02:24:22 p.&#160;m."/>
+        <attribute name="created" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjc7MDc6NTc6NDMgYS7CoG0uOzMxODg="/>
+        <attribute name="edited" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjc7MDI6MjQ6MjIgcC7CoG0uOzM7MzI5OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cantidadDenieroASacar" type="Real" array="False" size=""/>
+            <output expression="&quot;ingrese cantidad de dinero a sacar&quot;" newline="True"/>
+            <input variable="cantidadDenieroASacar"/>
+            <declare name="catidadMil" type="Integer" array="False" size=""/>
+            <assign variable="catidadMil" expression="cantidadDenieroASacar  / 1000"/>
+            <assign variable="cantidadDenieroASacar" expression="cantidadDenieroASacar - (catidadMil * 1000)"/>
+            <declare name="catidadQuinientos" type="Integer" array="False" size=""/>
+            <assign variable="catidadQuinientos" expression="cantidadDenieroASacar  / 500"/>
+            <assign variable="cantidadDenieroASacar" expression="cantidadDenieroASacar - (catidadQuinientos * 500)"/>
+            <declare name="cantidadCien" type="Integer" array="False" size=""/>
+            <assign variable="cantidadCien" expression="cantidadDenieroASacar  / 100"/>
+            <assign variable="cantidadDenieroASacar" expression="cantidadDenieroASacar - (cantidadCien * 100)"/>
+            <declare name="cantidadCincuenta" type="Integer" array="False" size=""/>
+            <assign variable="cantidadCincuenta" expression="cantidadDenieroASacar  / 50"/>
+            <assign variable="cantidadDenieroASacar" expression="cantidadDenieroASacar - (cantidadCincuenta *  50)"/>
+            <declare name="cantidadVeinte" type="Integer" array="False" size=""/>
+            <assign variable="cantidadVeinte" expression="cantidadDenieroASacar  / 20"/>
+            <assign variable="cantidadDenieroASacar" expression="cantidadDenieroASacar - (cantidadVeinte *  20)"/>
+            <declare name="cantidadMonedas" type="Integer" array="False" size=""/>
+            <assign variable="cantidadMonedas" expression="cantidadDenieroASacar  / 1"/>
+            <assign variable="cantidadDenieroASacar" expression="cantidadDenieroASacar - (cantidadMonedas  *  1)"/>
+            <output expression="&quot;Cantidad de billetes 1000 = &quot; &amp; catidadMil" newline="True"/>
+            <output expression="&quot;Cantidad de billetes 500 = &quot; &amp; catidadQuinientos" newline="True"/>
+            <output expression="&quot;Cantidad de billetes 100 = &quot; &amp; cantidadCien" newline="True"/>
+            <output expression="&quot;Cantidad de billetes 50 = &quot; &amp; cantidadCincuenta" newline="True"/>
+            <output expression="&quot;Cantidad de billetes 20 = &quot; &amp; cantidadVeinte" newline="True"/>
+            <output expression="&quot;Cantidad de monedas = &quot; &amp; cantidadMonedas" newline="True"/>
+            <output expression="&quot;Total de billetes tratando de tener la menor cantidad posible=&quot; &amp; (catidadMil + catidadQuinientos +  cantidadCien +  cantidadCincuenta +  cantidadVeinte)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

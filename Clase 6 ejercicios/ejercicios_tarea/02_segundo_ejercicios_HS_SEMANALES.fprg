@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sol"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-23 11:37:10 a.m."/>
+        <attribute name="created" value="c29sO1BJWElFOzIwMjMtMDItMjM7MTE6MjU6NDEgYS5tLjsyMTMw"/>
+        <attribute name="edited" value="c29sO1BJWElFOzIwMjMtMDItMjM7MTE6Mzc6MTAgYS5tLjsxOzIyMzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="VALORhora" type="Integer" array="False" size=""/>
+            <declare name="CANThorasdiarias" type="Integer" array="False" size=""/>
+            <declare name="VALORsueldosem" type="Integer" array="False" size=""/>
+            <declare name="CANThsSem" type="Integer" array="False" size=""/>
+            <output expression="&quot;INGRESE EL VALOR DE LA HORA TRABAJADA&quot;" newline="True"/>
+            <input variable="VALORhora"/>
+            <output expression="&quot;INGRESE SUS CANTIDAD DE HORAS DIARIAS TRABAJADAS EN D&#205;A H&#193;BIL&quot;" newline="True"/>
+            <input variable="CANThorasdiarias"/>
+            <assign variable="CANThsSem" expression="CANThorasdiarias*5 + CANThorasdiarias/2"/>
+            <assign variable="VALORsueldosem" expression="VALORhora* CANThsSem"/>
+            <output expression="&quot;SU SUELDO SEMANA ES $&quot; &amp;VALORsueldosem" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

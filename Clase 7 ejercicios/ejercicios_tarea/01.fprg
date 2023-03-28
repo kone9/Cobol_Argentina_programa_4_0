@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ariel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-27 03:09:40 p.&#160;m."/>
+        <attribute name="created" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjc7MDI6NTQ6NDMgcC7CoG0uOzMxOTU="/>
+        <attribute name="edited" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjc7MDM6MDk6NDAgcC7CoG0uOzI7MzMwMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numeroAIngresar" type="Integer" array="False" size=""/>
+            <assign variable="numeroAIngresar" expression="0"/>
+            <output expression="&quot;ingrese un n&#250;mero&quot;" newline="True"/>
+            <input variable="numeroAIngresar"/>
+            <if expression="numeroAIngresar %2 == 0">
+                <then>
+                    <output expression="&quot;numero es par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;numero es inpar&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

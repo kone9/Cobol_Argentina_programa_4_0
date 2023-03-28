@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ariel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-27 04:32:42 p.&#160;m."/>
+        <attribute name="created" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjc7MDQ6MTM6MTYgcC7CoG0uOzMxOTI="/>
+        <attribute name="edited" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjc7MDQ6MzI6NDIgcC7CoG0uOzQ7MzMwMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="variables varias"/>
+            <declare name="anioNacimientoEmpleada" type="Integer" array="False" size=""/>
+            <declare name="anioActual" type="Integer" array="False" size=""/>
+            <declare name="edadEmpleada" type="Integer" array="False" size=""/>
+            <declare name="faltaAniosJubilarse" type="Integer" array="False" size=""/>
+            <comment text="aqui creo una variable constante edad para jubilarse"/>
+            <declare name="edadJubilarse" type="Integer" array="False" size=""/>
+            <assign variable="edadJubilarse" expression="60"/>
+            <comment text="asingacion por input"/>
+            <output expression="&quot;ingrese a&#241;o nacimiento empleada&quot;" newline="True"/>
+            <input variable="anioNacimientoEmpleada"/>
+            <output expression="&quot;ingrese a&#241;o actual&quot;" newline="True"/>
+            <input variable="anioActual"/>
+            <comment text="hago las ecuaciones para saber la edad y los a&#241;os que le faltan"/>
+            <assign variable="edadEmpleada" expression="anioActual - anioNacimientoEmpleada"/>
+            <assign variable="faltaAniosJubilarse" expression="edadJubilarse - edadEmpleada"/>
+            <if expression="faltaAniosJubilarse &lt;= 0">
+                <then>
+                    <output expression="&quot;PUEDE JUBILARSE&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;NO puedo jubilarse le faltan &quot; &amp; faltaAniosJubilarse &amp; &quot;a&#241;os&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ariel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-28 12:23:18 p.&#160;m."/>
+        <attribute name="created" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjc7MDQ6Mzc6NDEgcC7CoG0uOzMxOTY="/>
+        <attribute name="edited" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjg7MTI6MjM6MTggcC7CoG0uOzE1OzMzNTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="variables numeros a ingresar&#13;&#10;"/>
+            <declare name="valorUNO" type="Integer" array="False" size=""/>
+            <declare name="valorDOS" type="Integer" array="False" size=""/>
+            <declare name="valorTRES" type="Integer" array="False" size=""/>
+            <comment text="asignacion"/>
+            <output expression="&quot;proximamente va a ingresar 3 numeros aleatorios&quot;" newline="True"/>
+            <output expression="&quot;ingrese primer numero aleatorio&quot;" newline="True"/>
+            <input variable="valorUNO"/>
+            <output expression="&quot;ingrese segundo numero aleatorio&quot;" newline="True"/>
+            <input variable="valorDOS"/>
+            <output expression="&quot;ingrese tercer numero aleatorio&quot;" newline="True"/>
+            <input variable="valorTRES"/>
+            <comment text="comparacion de valores y asignacion de variables"/>
+            <if expression="valorUNO &gt; valorDOS">
+                <then>
+                    <declare name="auxValorMayor" type="Integer" array="False" size=""/>
+                    <comment text="guardo valor mayor en variable aux para intercambiar posicion"/>
+                    <assign variable="auxValorMayor" expression="valorUNO"/>
+                    <comment text="el dos ahora es el primero"/>
+                    <assign variable="valorUNO" expression="valorDOS"/>
+                    <comment text="el primero ahora es el segundo, aca uso el auxiliar"/>
+                    <assign variable="valorDOS" expression="auxValorMayor"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="valorUNO &gt; valorTRES">
+                <then>
+                    <declare name="auxValorMayor" type="Integer" array="False" size=""/>
+                    <comment text="guardo valor mayor en variable aux para intercambiar posicion"/>
+                    <assign variable="auxValorMayor" expression="valorUNO"/>
+                    <comment text="el tres ahora es el primero"/>
+                    <assign variable="valorUNO" expression="valorTRES"/>
+                    <comment text="el primero ahora es el tercero, aca uso el auxiliar"/>
+                    <assign variable="valorTRES" expression="auxValorMayor"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="valorDOS &gt; valorTRES">
+                <then>
+                    <declare name="auxValorMayor" type="Integer" array="False" size=""/>
+                    <comment text="guardo valor mayor en variable aux para intercambiar posicion"/>
+                    <assign variable="auxValorMayor" expression="valorDOS"/>
+                    <comment text="el tres ahora es el primero"/>
+                    <assign variable="valorDOS" expression="valorTRES"/>
+                    <comment text="el primero ahora es el segundo, aca uso el auxiliar"/>
+                    <assign variable="valorTRES" expression="auxValorMayor"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;valor MENOR= &quot;&amp; valorUNO" newline="True"/>
+            <output expression="&quot;valor MEDIO= &quot;&amp; valorDOS" newline="True"/>
+            <output expression="&quot;valor MAYOR= &quot;&amp; valorTRES" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

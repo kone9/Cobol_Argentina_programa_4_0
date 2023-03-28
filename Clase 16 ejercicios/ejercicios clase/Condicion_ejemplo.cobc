@@ -1,0 +1,28 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. HELLO-WORLD.
+DATA DIVISION.
+    WORKING-STORAGE SECTION.
+        77 X PIC 99.
+        77 Y PIC 99.
+        77 Z PIC 99.
+        
+PROCEDURE DIVISION.
+    
+    IF HAY_SOL THEN
+        DISPLAY "HAY SOL"
+    ELSE
+        IF HAY_LLUVIA THEN
+            DISPLAY "HAY LLUVIA"*.si pones un punto hay un error con el else
+        ELSE
+            IF HAY_NIEVE THEN
+                DISPLAY "HAY NIEVE"
+            END-IF
+        END-IF
+    END-IF.
+    
+        
+    
+    
+    
+    
+STOP RUN.

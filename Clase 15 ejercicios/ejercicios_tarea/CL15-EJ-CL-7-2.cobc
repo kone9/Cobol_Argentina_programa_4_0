@@ -1,0 +1,33 @@
+* 2 - DesarroLLe un diagram de fLujo indicando Los pasos para: 
+*- Ingresar La nota deL examen de ALgoritmos y si es mayor o iguaL 
+*a siete imprimir que aprobO, 
+*sino que no aprobO. 
+
+IDENTIFICATION DIVISION.
+AUTHOR. ARIEL. GIMENEZ.
+SECURITY. NOTA-ALUMNO.
+PROGRAM-ID. CL15-EJ-CL-7-2. *MAINFRAME IBM SOLO HASTA 8 CARACTERES
+
+DATA DIVISION. 
+    WORKING-STORAGE SECTION. 
+        01 NOTAALUMNO PIC 99 VALUE ZERO. 
+    
+PROCEDURE DIVISION. 
+    DISPLAY "ingrese la nota del alumno del 1 al 10".*MUESTRA MENSAJE
+    ACCEPT NOTAALUMNO. *INGRESA VALOR
+    
+    
+    IF NOTAALUMNO >= 0 AND NOTAALUMNO <= 10 THEN *SI LA NOTA ESTA EN EL RANGO 0 A 10
+        
+        IF NOTAALUMNO >= 7 THEN *SI LA NOTA ES IGUAL O MAYOR 7
+            DISPLAY "aprobado" 
+        ELSE *SINO DESAPROBADO
+            DISPLAY "desaprobado" 
+        END-IF *TERMINO CONDICION
+        
+    ELSE *NOTA INCORRECTA AGREGADA
+        DISPLAY "Ingresaste mal la nota, solo del 0 al 10 va a terminar el programa" 
+    
+    END-IF. *TERMINO CONDICION
+
+STOP RUN. 

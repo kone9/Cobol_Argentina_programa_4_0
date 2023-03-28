@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ariel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-23 10:00:48 a.&#160;m."/>
+        <attribute name="created" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjM7MDg6NTM6MjggYS7CoG0uOzMxODQ="/>
+        <attribute name="edited" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjM7MTA6MDA6NDggYS7CoG0uOzQ7MzI4Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="juan" type="Real" array="False" size=""/>
+            <declare name="pedro" type="Real" array="False" size=""/>
+            <declare name="jose" type="Real" array="False" size=""/>
+            <declare name="capital" type="Integer" array="False" size=""/>
+            <declare name="porcentajeJuan" type="Real" array="False" size=""/>
+            <declare name="porcentajePedro" type="Real" array="False" size=""/>
+            <declare name="porcentajeJose" type="Real" array="False" size=""/>
+            <declare name="verficarResultado" type="Integer" array="False" size=""/>
+            <output expression="&quot;Engrese la inversion de la primer persona&quot;" newline="True"/>
+            <input variable="juan"/>
+            <output expression="&quot;Engrese la inversion de la segunda persona&quot;" newline="True"/>
+            <input variable="pedro"/>
+            <output expression="&quot;Engrese la inversion de la tercera persona&quot;" newline="True"/>
+            <input variable="jose"/>
+            <assign variable="capital" expression="juan + pedro + jose"/>
+            <assign variable="porcentajeJuan" expression="juan / capital * 100"/>
+            <assign variable="porcentajePedro" expression="pedro / capital * 100"/>
+            <assign variable="porcentajeJose" expression="jose / capital * 100"/>
+            <output expression="&quot;Porcentaje juan= &quot; &amp; porcentajeJuan" newline="True"/>
+            <output expression="&quot;Porcentaje pedro= &quot; &amp; porcentajePedro" newline="True"/>
+            <output expression="&quot;Porcentaje jose= &quot; &amp;porcentajeJose" newline="True"/>
+            <assign variable="verficarResultado" expression="porcentajeJuan + porcentajePedro + porcentajeJose"/>
+            <output expression="&quot;El capital total verificado de los porcentajes es= &quot; &amp;verficarResultado" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

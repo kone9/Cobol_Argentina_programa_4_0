@@ -1,0 +1,74 @@
+      *
+      * ESTE ES EL "machete" que hicimos en la óltima clase cuando
+      * comenzamos a explicar la definición de variables
+      *
+
+       WORKING-STORAGE SECTION.
+       01   WS-FECHA.
+001050      03 WS-AA   PIC 99.
+            03 WS-MM   PIC 99.                 230127
+            03 WS-DD   PIC 99.
+       01   WS-FECHA-D.
+001050      03 WS-DD   PIC 99.
+            03 WS-MM   PIC 99.                 270123
+            03 WS-AA   PIC 99.
+   
+       01   WS-FECHA-EDIT.
+001050      03 WS-DD   PIC 99.
+            03 FILLER  PIC X VALUE "/".
+            03 WS-MM   PIC 99.                 27/01/23
+            03 FILLER  PIC X VALUE "/".
+            03 WS-AA   PIC 99.
+  
+       01   WS-FECHA-NUM     REDEFINES  WS-FECHA PIC 9(6)
+       01   NOMBRE-DIA       PIC X(9).
+       01   WS-FECHA-ED PIC 99/99/99.          23/01/27.
+
+       01   WS-DIA-ALFA OCCURS 7 TIMES PIC X(9).
+       01   WS-DIA-ALFA-NAME REDEFINES WS-DIA-ALFA.
+            03        PIC X(9) VALUE "LUNES".
+            03 FILLER PIC X(9) VALUE "MARTES".
+            03 FILLER PIC X(9) VALUE "Miercoles".
+            03 FILLER PIC X(9) VALUE "JUEVES".
+            03 FILLER PIC X(9) VALUE "VIERNES".
+            03 FILLER PIC X(9) VALUE "SABADO".
+            03 FILLER PIC X(9) VALUE "DOMINGO".
+       77   ACUM      PIC 9(11).
+       01   WS-PERFORM
+       01   PEPE  PIC X. (ojo!! esto esta definido como nombre de párrafo
+                          en la PROCEDURE, no se admite)
+       01   12345     PIC 9(5).
+
+
+       PROCEDURE DIVISION.
+       COMIENZO.
+            initialize ws-fecha-edit.
+            MOVE WS-DIA-ALFA (3) TO NOMBRE-DIA.
+            GO TO PEPE.
+            MOVE......
+
+            MOVE WS-DD OF WS-FECHA TO WS-DD OF WS-FECHA-2.
+
+            MOVE CORRESPONDING WS-FECHA TO WS-FECHA-2
+
+       PEPE.
+                       FERNANDO                PEREZ12345    01012348 
+
+
+
+            1234
+
+           pic 9999        memoria F1F2F3F4   en binario cada byte tiene 8 bits
+
+                   F1 entoces se representa : 1111 0001
+                         la parte superior 
+                         del byte, donde esta
+                         la C se denomina ZONA
+                         y la de abajo DIGITO
+                   F2                 será  : 1111 0002
+
+EN LA CLASE DEL VIERNES EXPLICAREMOS COMP-3 
+            (formato, como enta en la memoria un COMPUTATIONAL-3) 
+                      
+
+

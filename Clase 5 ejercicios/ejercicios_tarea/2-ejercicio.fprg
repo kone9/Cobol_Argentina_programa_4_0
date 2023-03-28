@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ariel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-22 03:42:03 p.&#160;m."/>
+        <attribute name="created" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjI7MDM6Mjg6MjIgcC7CoG0uOzMxODk="/>
+        <attribute name="edited" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjI7MDM6NDI6MDMgcC7CoG0uOzU7MzI5Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="primerNumero" type="Integer" array="False" size=""/>
+            <declare name="segundoNumero" type="Integer" array="False" size=""/>
+            <declare name="resultadoSuma" type="Integer" array="False" size=""/>
+            <declare name="resultadoDiferencia" type="Integer" array="False" size=""/>
+            <output expression="&quot;tienes que ingresar dos numeros, el primero tiene que ser m&#225;s grande que el segundo&quot;" newline="True"/>
+            <output expression="&quot;ingresa un numero&quot;" newline="True"/>
+            <input variable="primerNumero"/>
+            <output expression="&quot;ingresa otro numero&quot;" newline="True"/>
+            <input variable="segundoNumero"/>
+            <assign variable="resultadoSuma" expression="primerNumero + segundoNumero"/>
+            <output expression="&quot;SUMA de numeros es igual a &quot; &amp;  resultadoSuma" newline="True"/>
+            <if expression="primerNumero &gt; segundoNumero">
+                <then>
+                    <assign variable="resultadoDiferencia" expression="primerNumero - segundoNumero"/>
+                    <output expression="&quot;DIFERENCIA de numeros es igual a &quot; &amp;  resultadoDiferencia" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;No se puede sacar la diferencia el primer numero es menor al segundo numero&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

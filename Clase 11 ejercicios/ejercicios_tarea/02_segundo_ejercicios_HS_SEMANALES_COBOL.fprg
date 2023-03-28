@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sol"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-13 09:36:07 a.&#160;m."/>
+        <attribute name="created" value="c29sO1BJWElFOzIwMjMtMDItMjM7MTE6MjU6NDEgYS5tLjsyMTMw"/>
+        <attribute name="edited" value="c29sO1BJWElFOzIwMjMtMDItMjM7MTE6Mzc6MTAgYS5tLjsxOzIyMzc="/>
+        <attribute name="edited" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDMtMTM7MDk6MzM6MjUgYS7CoG0uOzI7c29sO1BJWElFOzIwMjMtMDItMjM7MTA6NTE6MDkgYS5tLjswMV9wcmltZXJfZWplcmNpY2lvX1ZFTlRBU19jb2JvbC5mcHJnOzkwODE="/>
+        <attribute name="edited" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDMtMTM7MDk6MzY6MDcgYS7CoG0uOzI7MzI5Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="VALORhora pic 9(9999)"/>
+            <declare name="VALORhora" type="Integer" array="False" size=""/>
+            <comment text="CANThorasdiarias pic 9(9999)"/>
+            <declare name="CANThorasdiarias" type="Integer" array="False" size=""/>
+            <comment text="VALORsueldosem pic 9(9999)"/>
+            <declare name="VALORsueldosem" type="Integer" array="False" size=""/>
+            <comment text="CANThsSem pic 9(9999)"/>
+            <declare name="CANThsSem" type="Integer" array="False" size=""/>
+            <comment text="DISPLAY INGRESE EL VALOR DE LA HORA TRABAJADA"/>
+            <output expression="&quot;INGRESE EL VALOR DE LA HORA TRABAJADA&quot;" newline="True"/>
+            <input variable="VALORhora"/>
+            <comment text="INGRESE SUS CANTIDAD DE HORAS DIARIAS TRABAJADAS EN D&#205;A H&#193;BIL"/>
+            <output expression="&quot;INGRESE SUS CANTIDAD DE HORAS DIARIAS TRABAJADAS EN D&#205;A H&#193;BIL&quot;" newline="True"/>
+            <input variable="CANThorasdiarias"/>
+            <comment text="CANThsSem= CANThorasdiarias*5 + CANThorasdiarias/2"/>
+            <assign variable="CANThsSem" expression="CANThorasdiarias*5 + CANThorasdiarias/2"/>
+            <comment text="VALORsueldosem= VALORhora* CANThsSem"/>
+            <assign variable="VALORsueldosem" expression="VALORhora* CANThsSem"/>
+            <comment text="DISPLAY SU SUELDO SEMANA ES $&quot; &amp;VALORsueldosem"/>
+            <output expression="&quot;SU SUELDO SEMANA ES $&quot; &amp;VALORsueldosem" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="sol"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-13 09:29:05 a.&#160;m."/>
+        <attribute name="created" value="c29sO1BJWElFOzIwMjMtMDItMjM7MTA6NTE6MDkgYS5tLjsyMTMy"/>
+        <attribute name="edited" value="c29sO1BJWElFOzIwMjMtMDItMjM7MTE6MjU6MzAgYS5tLjsxOzIyMzY="/>
+        <attribute name="edited" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDMtMTM7MDk6MTc6MzUgYS7CoG0uOzE7c29sO1BJWElFOzIwMjMtMDItMjM7MTA6NTE6MDkgYS5tLjswMV9wcmltZXJfZWplcmNpY2lvX1ZFTlRBUy5mcHJnOzg0NjE="/>
+        <attribute name="edited" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDMtMTM7MDk6Mjk6MDUgYS7CoG0uOzM7MzI5Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="IDvendedor" type="Integer" array="False" size=""/>
+            <comment text=""/>
+            <comment text="CANTventas pic 9(9999)"/>
+            <declare name="CANTventas" type="Integer" array="False" size=""/>
+            <comment text="valor_total pic 9(999999)"/>
+            <declare name="valorTOTAL" type="Integer" array="False" size=""/>
+            <comment text="VENTAconcomision pic 9(999999)"/>
+            <declare name="VENTAconcomision" type="Integer" array="False" size=""/>
+            <comment text="VENTAconcomision pic 9(999999)"/>
+            <declare name="VENTAconcomision" type="Integer" array="False" size=""/>
+            <comment text="VENTAconcomision pic 9(999999)VALUE 5000"/>
+            <assign variable="SALARIObase" expression="50000"/>
+            <comment text="SALARIOfinal pic 9(999999)"/>
+            <declare name="SALARIOfinal" type="Integer" array="False" size=""/>
+            <comment text="DISPLAY &quot;INGRESE SU ID&quot;"/>
+            <output expression="&quot;INGRESE SU ID&quot;" newline="True"/>
+            <input variable="IDvendedor"/>
+            <comment text="DISPLAY &quot;&quot;INGRESE SI CANTIDAD DE VENTAS&quot;&quot;"/>
+            <output expression="&quot;INGRESE SI CANTIDAD DE VENTAS&quot;" newline="True"/>
+            <input variable="CANTventas"/>
+            <comment text="DISPLAY INGRESE EL TOTAL DE SUS VENTAS"/>
+            <output expression="&quot;INGRESE EL TOTAL DE SUS VENTAS&quot;" newline="True"/>
+            <input variable="valorTOTAL"/>
+            <comment text="COMPUTE VENTAconcomision = valorTOTAL *1.05"/>
+            <assign variable="VENTAconcomision" expression="valorTOTAL *1.05"/>
+            <comment text="COMPUTE SALARIOfinal= SALARIObase + VENTAconcomision"/>
+            <assign variable="SALARIOfinal" expression="SALARIObase + VENTAconcomision"/>
+            <comment text="DISPLAY &quot;El salario del empleado &quot; &amp; IDvendedor &amp; &quot; es $&quot; &amp; SALARIOfinal"/>
+            <output expression="&quot;El salario del empleado &quot; &amp; IDvendedor &amp; &quot; es $&quot; &amp; SALARIOfinal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

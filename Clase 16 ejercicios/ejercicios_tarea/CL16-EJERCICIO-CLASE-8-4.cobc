@@ -1,0 +1,82 @@
+*Cobol turno mañana Clase 16- EJERCIO 4 DE TAREA 8 PERO CON COBOL
+
+*Una editorial determina el precio de un libro según la cantidad de páginas que contiene. El costo 
+*básico del libro es de $500, más $20,20 por página con encuadernación rústica. Si el número de 
+*páginas supera las 300 la encuadernación debe ser en tela, lo que incrementa el costo en $200. 
+*Además, si el número de páginas sobrepasa las 600 se hace necesario un procedimiento especial 
+*de encuadernación que incrementa el costo en $336. Desarrollar un programa que calcule el costo 
+*de un libro dado el número de páginas 
+
+*NOTA= nose bien si se puede concatener en DISPLAY, escuche que dijeron que no, lo dejo asi para revisión 
+*NOTA= siento que los if y los else sobre todo el END-IF pueden estar mal
+
+
+IDENTIFICATION DIVISION.
+AUTHOR. ARIEL. GIMENEZ.
+SECURITY. PRECIO-LIBRO.
+PROGRAM-ID. CL16-EJERCICIO-CLASE-8-4. *MAINFRAME IBM SOLO HASTA 8 CARACTERES
+
+*declaracion de variables
+DATA DIVISION.
+    WORKING-STORAGE SECTION.
+        *VARIABLES CONSTANTES TENDRIA QUE USAR MONEDA PERO NO SE HACERLO
+        01 ValorbasicoLibro PIC 999 VALUE 500.               *constante precio básico Libro
+        01 ValorPorPagina PIC 99V99 VALUE 20.20.             *constante precio por página
+        01 ValorTapaTela PIC 999 VALUE 200.                  *constante precio tapa tela
+        01 ValorProcedimientoEspecial PIC 999 VALUE 336.     *constante precio extra procedimiento especial
+       
+        *VARIABLES
+        01 valorLibro PIC 99999.                             *valor libro
+        01 cantidadDePáginas PIC 99999.                      *cantidad páginas
+        
+*Donde se ejecuta el código la lógica      
+PROCEDURE DIVISION.
+    001 INICIO. *Lo vi en sus programas, tengo una idea, pero no tan clara, lo dejo asi a este "parráfo".
+        *guardo valor de inicio
+        DISPLAY "Ingrese cantidad de páginas del libro para calcular su valor"
+        ACCEPT cantidadDePáginas
+        
+        *-->saco el valor básico del libro donde sumo el valor básico más el valor por página<--
+        *-----------------------------------------------------------------------------------------------------------------------
+        IF cantidadDePáginas < 1 THEN                       
+            *empieza a calcular el valor hoja, según lo que investigue 
+            *para que el asterisco no sea tomado como comentario hay 
+            *que encerrarlo con (), esto tambien se aplica
+            *a cobol IBM y cobol standart
+            COMPUTE valorLibro = ValorbasicoLibro +  (ValorPorPagina  (*) cantidadDePáginas) 
+            *--------------------------------------------------
+            IF cantidadDePáginas >== 300 THEN    
+                *valor básico de libro más la tapa
+                 COMPUTE valorLibro = ValorbasicoLibro +  ValorTapaTela
+                 *---------------------
+                 IF cantidadDePáginas >== 600 THEN    
+                    *valor básico de libro más valor procedimiento especial
+                     COMPUTE valorLibro = ValorbasicoLibro +  ValorTapaTela
+                     DISPLAY "El precio básico del libro incluyendo tapa y procedimiento especial porque tiene " & cantidadDePáginas & " hojas es de $" &valorLibro
+                ELSE
+                    DISPLAY "El precio básico del libro incluyendo tapa porque tiene " & cantidadDePáginas & " hojas es de $" &valorLibro
+                END IF
+                *---------------------
+            ELSE
+                DISPLAY "El precio básico del libro porque tiene " & cantidadDePáginas & " hojas es de $" &valorLibro
+            END IF
+            *--------------------------------------------------
+        ELSE
+            DISPLAY "se va a cerrar el programa tienes que ingresar más de una página"
+        END IF
+        *-----------------------------------------------------------------------------------------------------------------------
+    
+STOP RUN.
+
+
+
+
+
+
+
+
+
+
+
+
+

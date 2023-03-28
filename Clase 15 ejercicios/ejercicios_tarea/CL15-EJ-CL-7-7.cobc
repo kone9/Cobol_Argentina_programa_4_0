@@ -1,0 +1,52 @@
+*7 - DesarroLte un diagrams de fLujo que permits Leer tres numeros en forma oLeatoria y 
+*ardenartos de menor a mayor. •Muestre eL resuLtado. •Datos de prueba de escritorio: 
+*ejecutar La prueba con todas Las combinaciones posibLes de esos 3 numeros (3!) 
+
+IDENTIFICATION DIVISION. 
+AUTHOR. ARIEL. GIMENEZ. 
+SECURITY. ORDENAR-NUMEROS. 
+PROGRAM-ID. CL15-EJ-CL-7-7. *MAINFRAME IBM SOLO HASTA 8 CARACTERES
+
+DATA DIVISION. 
+WORKING-STORAGE SECTION.
+*variabLes numeros a tngresor 
+    01 VALORUNO PIC 9999 VALUE ZERO. 
+    01 VALORDOS PIC 9999 VALUE ZERO. 
+    01 VALORTRES PIC 9999 VALUE ZERO. 
+    01 AUXVALORMAYOR PIC 9999 VALUE ZERO 
+
+PROCEDURE DIVISION. 
+    001-COMIENZO. 
+    *astgnocton de variabLes 
+     DISPLAY "proximamente va a ingresar 3 numeros aleatorios".
+     DISPLAY "ingrese primer numero aleatoric".
+     ACCEPT VALORUNO.
+     DISPLAY "ingrese Segundo numero aleatorio".
+     ACCEPT VALORDOS.
+     DISPLAY "ingrese tercer numero aleatoric".
+     ACCEPT VALORTRES. 
+     
+*comparacion de vaLores y asignacion de variabLes 
+IF VALORUNO > VALORDOS THEN*guard!, vaLor mayor en variabLe aux paw intercambiar position 
+    MOVE VALORMAYOR TO VALORUNOAUX. *et dos ahora as eL primero 
+    MOVE VALORDOS  TO VALORUNO. *et primero ahoro es eL segundo, ace use eL auxiLior 
+    MOVE AUXVALORMAVOR  TO VALORDOS. 
+END-IF   
+
+IF VALORUNO > VALORTRES THEN*guard° vaLor mayor en variabLe aux pars intercambior position 
+    MOVE VALORUNO  TO AUXVALORMAYOR. *set dos ahoro as eL prtmero 
+    MOVE VALORTRES  TO VALORUNO. *et prtmero ohora es eL segundo, ace use at ouxtLtar 
+    MOVE AUXVALORMAYOR  TO VALORTRES. 
+END-IF
+
+IF VALORDOS > VALORTRES THEN*guardo valor mayor en variabLe aux pare tntercambtor position 
+    MOVE  VALORDOS TO  AUXVALORMAYOR. *et dos ahora as at primero 
+    MOVE VALORTRES  TO VALORDOS. *et primero chore as at segundo, ace use eL auxiLtor 
+    MOVE AUXVALORMAYOR  TO VALORTRES. *Imprtmo resuitodos 
+END-IF
+
+DISPLAY "VALOR MENOR= " VALORUNO *Imprimo resuLtados 
+DISPLAY "VALOR MEDIO= " VALORDOS *Imprimo resuLtados 
+DISPLAY "VALOR MAYOR= " VALORTRES *Imprimo resuLtados 
+
+STOP RUN. 

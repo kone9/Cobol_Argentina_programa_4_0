@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ariel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-01 07:54:40 a.&#160;m."/>
+        <attribute name="created" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDMtMDE7MDY6NTI6MTUgYS7CoG0uOzMxNzQ="/>
+        <attribute name="edited" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDMtMDE7MDc6NTQ6NDAgYS7CoG0uOzMyOzMzMzU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="--------------------------------------------------------------------------------------------------"/>
+            <comment text="Ariel Gimenez"/>
+            <comment text="01/03/2023"/>
+            <comment text="Cobol turno ma&#241;ana Clase 8 EJERCICIO 4"/>
+            <comment text="Una editorial determina el precio de un libro seg&#250;n la cantidad de p&#225;ginas que contiene. El costo &#13;&#10;b&#225;sico del libro es de $500, m&#225;s $20,20 por p&#225;gina con encuadernaci&#243;n r&#250;stica. Si el n&#250;mero de &#13;&#10;p&#225;ginas supera las 300 la encuadernaci&#243;n debe ser en tela, lo que incrementa el costo en $200. &#13;&#10;Adem&#225;s, si el n&#250;mero de p&#225;ginas sobrepasa las 600 se hace necesario un procedimiento especial &#13;&#10;de encuadernaci&#243;n que incrementa el costo en $336. Desarrollar un programa que calcule el costo &#13;&#10;de un libro dado el n&#250;mero de p&#225;ginas "/>
+            <comment text="--------------------------------------------------------------------------------------------------"/>
+            <comment text="VARIABLES CONSTANTES"/>
+            <comment text="constante precio b&#225;sico Libro"/>
+            <declare name="ValorbasicoLibro" type="Real" array="False" size=""/>
+            <assign variable="ValorbasicoLibro" expression="500"/>
+            <comment text="constante precio por p&#225;gina"/>
+            <declare name="ValorPorPagina" type="Real" array="False" size=""/>
+            <assign variable="ValorPorPagina" expression="20.20"/>
+            <comment text="constante precio tapa tela"/>
+            <declare name="ValorTapaTela" type="Real" array="False" size=""/>
+            <assign variable="ValorTapaTela" expression="200"/>
+            <comment text="constante precio extra procedimiento especial"/>
+            <declare name="ValorProcedimientoEspecial" type="Real" array="False" size=""/>
+            <assign variable="ValorProcedimientoEspecial" expression="336"/>
+            <comment text="--------------------------------------------------------------------------------------------------"/>
+            <comment text="VARIABLES"/>
+            <comment text="valor libro"/>
+            <declare name="valorLibro" type="Real" array="False" size=""/>
+            <comment text="cantidad p&#225;ginas"/>
+            <declare name="cantidadDeP&#225;ginas" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ingrese cantidad de p&#225;ginas del libro para calcular su valor&quot;" newline="True"/>
+            <input variable="cantidadDeP&#225;ginas"/>
+            <comment text="saco el valor b&#225;sico del libro donde sumo el valor b&#225;sico m&#225;s el valor por p&#225;gina"/>
+            <if expression="cantidadDeP&#225;ginas &lt; 1">
+                <then>
+                    <comment text="empieza a calcular el valor hoja"/>
+                    <assign variable="valorLibro" expression="ValorbasicoLibro + (ValorPorPagina * cantidadDeP&#225;ginas)"/>
+                    <if expression="cantidadDeP&#225;ginas &gt;= 300">
+                        <then>
+                            <comment text="valor b&#225;sico de libro m&#225;s la tapa"/>
+                            <assign variable="valorLibro" expression="valorLibro + ValorTapaTela"/>
+                            <if expression="cantidadDeP&#225;ginas &gt;= 600">
+                                <then>
+                                    <comment text="valor b&#225;sico de libro m&#225;s valor procedimiento especial"/>
+                                    <assign variable="valorLibro" expression="valorLibro + ValorProcedimientoEspecial"/>
+                                    <output expression="&quot;El precio b&#225;sico del libro incluyendo tapa y procedimiento especial porque tiene &quot; &amp; cantidadDeP&#225;ginas &amp; &quot; hojas es de $&quot; &amp;valorLibro" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;El precio b&#225;sico del libro incluyendo tapa porque tiene &quot; &amp; cantidadDeP&#225;ginas &amp; &quot; hojas es de $&quot; &amp;valorLibro" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;El precio b&#225;sico del libro porque tiene &quot; &amp; cantidadDeP&#225;ginas &amp; &quot; hojas es de $&quot; &amp;valorLibro" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <comment text="se cierra el programa, no hay m&#225;s de una hoja"/>
+                    <output expression="&quot;se va a cerrar el programa tienes que ingresar m&#225;s de una p&#225;gina&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

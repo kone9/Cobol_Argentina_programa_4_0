@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ariel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-27 04:36:59 p.&#160;m."/>
+        <attribute name="created" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjc7MDQ6MzI6NDUgcC7CoG0uOzMxOTU="/>
+        <attribute name="edited" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjc7MDQ6MzY6NTkgcC7CoG0uOzE7MzMxMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="neumaticoEstaDesinflado" type="Boolean" array="False" size=""/>
+            <output expression="&quot;ingrese = true... si neumatico esta desinflado&quot;" newline="True"/>
+            <output expression="&quot;ingrese = false... si neumatico NO esta desinflado&quot;" newline="True"/>
+            <input variable="neumaticoEstaDesinflado"/>
+            <if expression="neumaticoEstaDesinflado == true">
+                <then>
+                    <output expression="&quot;cambiar neumatico&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Neumatico sigue inflado, No cambiarlo&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

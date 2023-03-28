@@ -1,0 +1,97 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PERSRPT.
+
+      ****************************************************************
+      * este es el primer programa del curso - esta sin estructurar  *
+      ****************************************************************                                                  *
+
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE CONTROL.
+	   SELECT	PERSONAL	ASSIGN	DDPERS.
+	   SELECT	REPORTE	ASSIGN	DDRPT.
+       DATA DIVISION.
+       FILE SECTION
+       FD	PERSONAL
+	   RECORDING MODE IS F
+	   BLOCK CONTAINS 0 RECORDS.
+       01	REGISTRO-PERSONAL			PIC X(80).
+       FD	REPORTE
+	   RECORDING MODE IS F
+	   BLOCK CONTAINS 0 RECORDS.
+       01	REGISTRO-REPORTE			PIC X(80).
+
+
+       WORKING STORAGE SECTION.
+      * ACA ARRANCA LA WORKING
+       01	REPORTE-LAYOUT.
+      * en la proxima linea hay un ejemplo de continuacion
+           02    FILLER   PIC X(70) VALUE "                       LKJGLJGJLG
+      -    POIPOUPOUPU " 
+	   02	REP-NUM-EMPLEADO	PIC 9(5)	VALUE ZERO.
+	   02	FILLER			PIC X(5)	VALUE SPACES.
+	   02	REP-FECHA-ALTA
+		03	REP-DD-ALTA		PIC 99	VALUE ZERO.
+		03				PIC X	VALUE ‘/’.
+		03	REP-MM-ALTA		PIC 99	VALUE ZERO.
+		03				PIC X	VALUE ‘/’.
+		03	REP-AA-ALTA		PIC 9(4)	VALUE ZERO.
+           02   FILLER                          PIC X(5)        VALUE SPACES.
+           02      AYN                              PIC X(30).
+           02	FILLER			PIC X(21)	VALUE SPACES.
+
+
+        01	PERSONAL-LAYOUT
+	    02	NUM-EMPLEADO		PIC 9(5).
+	    02	FECHA-ALTA
+		03	AA-ALTA			PIC 9(4)	VALUE ZERO.
+		03	MM-ALTA			PIC 99	VALUE ZERO.
+		03	DD-ALTA			PIC 99	VALUE ZERO.
+	    02	FILLER				PIC X(67).
+        01	FLAG-FIN					PIC XX	VALUE SPACES.
+	88	END-OF-FIN		VALUE ‘SI’.
+	88	NOT-END-OF-FIN		VALUE ‘NO’.
+
+        PROCEDURE DIVISION
+	    OPEN INPUT PERSONAL.
+	    OPEN OUTPUT REPORTE.
+	    READ PERSONAL INTO PERSONAL-LAYOUT SET END-OF-FIN TO TRUE
+	    PERFORM UNTIL END-OF-FIN
+		MOVE	NUM-EMPLEADO	                    TO REP-NUM-EMPLEADO
+		MOVE	AA-ALTA			TO REP-AA-ALTA
+		MOVE	MM-ALTA			TO REP-MM-ALTA
+		MOVE	DD-ALTA			TO REP-DD-ALTA
+		MOVE	REPORTE-LAYOUT TO REGISTRO-REPORTE
+		WRITE	REGISTRO-REPORTE
+		READ	PERSONAL INTO PERSONAL-LAYOUT  SET END-OF-FIN TO TRUE
+	    END-PERFORM
+	    CLOSE PERSONAL REPORTE.
+	    GOBACK.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1234220230207APELLIDO Y NOMBRE 1   OK
+1234220230207APELLIDO Y NOMBRE 2
+FIN
+NRO.       FECHA       NOMBRE
+12342     07/02/2023    AYN 1                   
+12352     07/02/2023    APELLYDO Y NOMBRE 2 
+

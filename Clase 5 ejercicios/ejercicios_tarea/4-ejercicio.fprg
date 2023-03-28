@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ariel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-23 09:02:22 a.&#160;m."/>
+        <attribute name="created" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjI7MDM6NTc6NTEgcC7CoG0uOzMxOTM="/>
+        <attribute name="edited" value="YXJpZWw7QVJJRUwtUEMtV0lORE9XOzIwMjMtMDItMjM7MDk6MDI6MjIgYS7CoG0uOzU7MzI4NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="notaPrimerParcial" type="Real" array="False" size=""/>
+            <declare name="notaSegundoParcial" type="Real" array="False" size=""/>
+            <declare name="promedio" type="Real" array="False" size=""/>
+            <declare name="notaIncorrecta" type="Boolean" array="False" size=""/>
+            <assign variable="notaIncorrecta" expression="true"/>
+            <while expression="notaIncorrecta == true">
+                <output expression="&quot;ingrese la nota del PRIMER parcial del 0  al 10, pueden haber decimales&quot;" newline="True"/>
+                <input variable="notaPrimerParcial"/>
+                <output expression="&quot;ingrese la nota del SEGUNDO parcial del 0  al 10, pueden haber decimales&quot;" newline="True"/>
+                <input variable="notaSegundoParcial"/>
+                <if expression="(notaPrimerParcial &gt;= 0) &amp;&amp; (notaPrimerParcial &lt;= 10)">
+                    <then>
+                        <assign variable="notaIncorrecta" expression="false"/>
+                    </then>
+                    <else>
+                        <assign variable="notaIncorrecta" expression="true"/>
+                    </else>
+                </if>
+                <if expression="(notaSegundoParcial &gt;= 0) &amp;&amp; (notaSegundoParcial &lt;= 10)">
+                    <then>
+                        <assign variable="notaIncorrecta" expression="false"/>
+                    </then>
+                    <else>
+                        <assign variable="notaIncorrecta" expression="true"/>
+                    </else>
+                </if>
+                <if expression="notaIncorrecta == true">
+                    <then>
+                        <output expression="&quot;INGRESA LA NOTA CORRECTA DEL 1 AL 10&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <assign variable="promedio" expression="(notaPrimerParcial + notaSegundoParcial) / 2"/>
+            <output expression="&quot;el proimedio de las notas del primer parcial que fue &quot; &amp; notaPrimerParcial  &amp; &quot;  y del seugndoo parcial que fue &quot; &amp; notaSegundoParcial &amp; &quot;.......... ES -&gt; &quot; &amp;  promedio &amp;&quot;.................&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
